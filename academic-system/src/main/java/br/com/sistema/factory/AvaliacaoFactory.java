@@ -2,32 +2,36 @@ package br.com.sistema.factory;
 
 import br.com.sistema.dto.AvaliacaoDTO;
 import br.com.sistema.exception.AcademicSystemException;
+import br.com.sistema.exception.InvalidAssessmentException;
 import br.com.sistema.model.*;
+import br.com.sistema.validation.DomainValidator;
 
 public class AvaliacaoFactory {
     
     public static Avaliacao criarAvaliacao(AvaliacaoDTO dto) {
-        if (dto.getTitulo() == null || dto.getTitulo().trim().isEmpty()) {
-            throw new AcademicSystemException("O título da avaliação não pode ser vazio.");
+        if (dto.getTipo() == null || dto.getTitulo().trim().isEmpty()) {
+            throw new InvalidAssessmentException("Tipo de avaliação inválido.");
         }
-        if (dto.getValor() < 0 || dto.getPeso() <= 0) {
-            throw new AcademicSystemException("Valor não pode ser negativo e peso deve ser maior que zero.");
-        }
-        if (dto.getTipo() == null) {
-            throw new AcademicSystemException("Tipo de avaliação inválido.");
-        }
+        
+        Avaliacao avaliacao;
 
         switch (dto.getTipo()) {
-            case EXAME:
-                return new Exame(dto.getTitulo(), dto.getValor(), dto.getPeso());
-            case TAREFA_PRATICA:
-                return new TarefaPratica(dto.getTitulo(), dto.getValor(), dto.getPeso());
-            case SEMINARIO:
-                return new Seminario(dto.getTitulo(), dto.getValor(), dto.getPeso());
-            case ATRIBUICAO:
-                return new Atribuicao(dto.getTitulo(), dto.getValor(), dto.getPeso());
-            default:
-                throw new AcademicSystemException("Tipo de avaliação não suportado.");
+        case EXAME:
+            avaliacao = new Exame(dto.getTitulo(), dto.getValor(), dto.getPeso());
+            break;
+        case TAREFA_PRATICA:
+            avaliacao = new TarefaPratica(dto.getTitulo(), dto.getValor(), dto.getPeso());
+            break;
+        case SEMINARIO:
+            avaliacao = new Seminario(dto.getTitulo(), dto.getValor(), dto.getPeso());
+            break;
+        case ATRIBUICAO:
+            avaliacao = new Atribuicao(dto.getTitulo(), dto.getValor(), dto.getPeso());
+            break;
+        default:
+            throw new AcademicSystemException("Tipo de avaliação não suportado.");
         }
+        DomainValidator.validarAvaliacao(avaliacao);
+        return avaliacao;
     }
 }

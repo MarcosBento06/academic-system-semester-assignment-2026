@@ -1,0 +1,10 @@
+Class Code: 101
+Class Title: a
+----------------------------------
+Class Code: 102
+Class Title: b
+Assessment Type: ATRIBUICAO
+Assessment Value: 2.0
+Assessment Weight: 10.0
+
+----------------------------------

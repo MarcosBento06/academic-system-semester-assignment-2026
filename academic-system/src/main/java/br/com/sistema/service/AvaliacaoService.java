@@ -2,13 +2,13 @@ package br.com.sistema.service;
 
 import br.com.sistema.dto.AvaliacaoDTO;
 import br.com.sistema.exception.AcademicSystemException;
-import br.com.sistema.exception.UnauthorizedAccessException;
 import br.com.sistema.factory.AvaliacaoFactory;
 import br.com.sistema.model.Avaliacao;
 import br.com.sistema.model.Turma;
 import br.com.sistema.model.Usuario;
 import br.com.sistema.model.enums.PapelUsuario;
 import br.com.sistema.repository.TurmaRepository;
+import br.com.sistema.security.exception.AuthorizationException;
 
 public class AvaliacaoService {
     
@@ -20,7 +20,7 @@ public class AvaliacaoService {
 
     public void registrarAvaliacao(Usuario usuario, String codigoTurma, AvaliacaoDTO dto) {
         if (usuario == null || usuario.getPapel() != PapelUsuario.PROFESSOR) {
-            throw new UnauthorizedAccessException("Acesso negado: Apenas professores podem registrar avaliações.");
+            throw new AuthorizationException("Acesso negado: Apenas professores podem registrar avaliações.");
         }
 
         Turma turma = turmaRepository.buscarPorCodigo(codigoTurma);

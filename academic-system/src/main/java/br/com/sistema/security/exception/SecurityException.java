@@ -1,0 +1,7 @@
+package br.com.sistema.security.exception;
+
+public class SecurityException extends RuntimeException {
+    public SecurityException(String message) {
+        super(message);
+    }
+}
