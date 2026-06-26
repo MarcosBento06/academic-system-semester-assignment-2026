@@ -1,0 +1,36 @@
+name: Release
+
+on:
+  release:
+    types:
+      - published
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '25'
+          cache: maven
+
+      - name: Build and Test
+        working-directory: academic-system
+        run: mvn clean verify
+
+      - name: Upload release artifact
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            academic-system/target/*.jar
