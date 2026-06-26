@@ -1,5 +1,7 @@
 package br.com.sistema.security;
 
+import br.com.sistema.security.exception.AuthenticationException;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -15,11 +17,9 @@ public class UserRepository {
                     return dados;
                 }
             }
-
         } catch (IOException e) {
-            throw new RuntimeException("Erro ao ler usuários.");
+            throw new AuthenticationException("Arquivo de usuários não encontrado ou inacessível.");
         }
-
         return null;
     }
 }

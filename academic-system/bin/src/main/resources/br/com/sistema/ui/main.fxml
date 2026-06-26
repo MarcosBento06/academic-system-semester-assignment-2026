@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="br.com.sistema.ui.controller.MainController"
+            stylesheets="@styles.css"
+            prefWidth="900" prefHeight="600">
+
+    <top>
+        <HBox styleClass="topbar" alignment="CENTER_LEFT" spacing="0">
+            <Label styleClass="topbar-title" text="Academic System"/>
+            <Pane HBox.hgrow="ALWAYS"/>
+            <Label fx:id="lblUserInfo" styleClass="topbar-user" text=""/>
+        </HBox>
+    </top>
+
+    <center>
+        <HBox>
+            <VBox styleClass="sidebar" spacing="2">
+
+                <Button fx:id="btnTurmas" styleClass="sidebar-btn" text="Turmas"
+                        onAction="#showTurmas" maxWidth="Infinity"
+                        visible="false" managed="false"/>
+
+                <Button fx:id="btnAvaliacoes" styleClass="sidebar-btn" text="Avaliações"
+                        onAction="#showAvaliacoes" maxWidth="Infinity"/>
+
+                <Button fx:id="btnVisualizar" styleClass="sidebar-btn" text="Visualizar Dados"
+                        onAction="#showVisualizacao" maxWidth="Infinity"/>
+
+                <Button fx:id="btnRelatorios" styleClass="sidebar-btn" text="Relatórios"
+                        onAction="#showRelatorios" maxWidth="Infinity"/>
+
+                <Button fx:id="btnPersistencia" styleClass="sidebar-btn" text="Persistência"
+                        onAction="#showPersistencia" maxWidth="Infinity"
+                        visible="false" managed="false"/>
+
+                <Button fx:id="btnSalvar" styleClass="sidebar-btn" text="Salvar Dados"
+                        onAction="#handleSalvar" maxWidth="Infinity"/>
+
+                <Pane VBox.vgrow="ALWAYS"/>
+                <Pane styleClass="sidebar-separator"/>
+                <Button styleClass="sidebar-btn-logout" text="Logout"
+                        onAction="#handleLogout" maxWidth="Infinity"/>
+            </VBox>
+
+            <StackPane fx:id="contentArea" HBox.hgrow="ALWAYS" styleClass="content-pane"/>
+        </HBox>
+    </center>
+
+</BorderPane>

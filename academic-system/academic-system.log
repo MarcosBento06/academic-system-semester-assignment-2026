@@ -1,0 +1,164 @@
+jun. 26, 2026 11:14:36 AM br.com.sistema.service.PersistenceService carregarDados
+INFORMAÇÕES: PERSISTENCE_LOAD - dados carregados do formato: TXT
+Jun 26, 2026 12:10:08 PM br.com.sistema.logging.AcademicLoggerTest lambda$loggerAceitaMensagensInfoSemErro$0
+INFO: TEST - mensagem de teste
+Jun 26, 2026 12:10:11 PM br.com.sistema.security.AuthenticationService autenticar
+INFO: AUTH_SUCCESS - login: prof, papel: PROFESSOR
+Jun 26, 2026 12:10:11 PM br.com.sistema.security.AuthenticationService autenticar
+WARNING: AUTH_FAILURE - senha inválida para: admin
+Jun 26, 2026 12:10:11 PM br.com.sistema.security.AuthenticationService autenticar
+INFO: AUTH_SUCCESS - login: admin, papel: ADMIN
+Jun 26, 2026 12:10:11 PM br.com.sistema.security.AuthenticationService autenticar
+WARNING: AUTH_FAILURE - usuário não encontrado: naoexiste
+Jun 26, 2026 12:10:11 PM br.com.sistema.security.AuthenticationService verificarAdmin
+WARNING: AUTHZ_FAILURE - usuário prof tentou ação de ADMIN
+Jun 26, 2026 12:10:11 PM br.com.sistema.service.AvaliacaoService registrarAvaliacao
+INFO: ASSESSMENT_REGISTERED - turma: CS101, avaliação: Prova Final por: prof
+Jun 26, 2026 12:10:11 PM br.com.sistema.service.AvaliacaoService registrarAvaliacao
+WARNING: AUTHZ_FAILURE - registro de avaliação negado para: admin
+Jun 26, 2026 12:10:11 PM br.com.sistema.service.PersistenceService configurarPersistencia
+WARNING: AUTHZ_FAILURE - configurarPersistencia negado para: prof
+Jun 26, 2026 12:10:11 PM br.com.sistema.service.PersistenceService configurarPersistencia
+WARNING: AUTHZ_FAILURE - configurarPersistencia negado para: null
+Jun 26, 2026 12:10:11 PM br.com.sistema.service.PersistenceService configurarPersistencia
+INFO: PERSISTENCE_CONFIG - tipo alterado para: XML por: admin
+Jun 26, 2026 12:10:11 PM br.com.sistema.service.PersistenceService configurarPersistencia
+INFO: PERSISTENCE_CONFIG - tipo alterado para: JSON por: admin
+Jun 26, 2026 12:10:11 PM br.com.sistema.service.ReportService gerarRelatorioConfiguracaoPersistencia
+WARNING: AUTHZ_FAILURE - relatório de persistência negado para: prof
+Jun 26, 2026 12:10:11 PM br.com.sistema.service.ReportService gerarRelatoriopesoAvaliacoes
+INFO: REPORT_GEN - pesos de avaliações solicitado por: admin [ADMIN]
+Jun 26, 2026 12:10:11 PM br.com.sistema.service.ReportService gerarRelatorioResumoAvaliacoes
+INFO: REPORT_GEN - resumo de avaliações solicitado por: prof [PROFESSOR]
+Jun 26, 2026 12:10:11 PM br.com.sistema.service.ReportService gerarRelatoriopesoAvaliacoes
+INFO: REPORT_GEN - pesos de avaliações solicitado por: prof [PROFESSOR]
+Jun 26, 2026 12:10:11 PM br.com.sistema.service.ReportService gerarRelatoriopesoAvaliacoes
+INFO: REPORT_GEN - pesos de avaliações solicitado por: admin [ADMIN]
+Jun 26, 2026 12:10:11 PM br.com.sistema.service.PersistenceService configurarPersistencia
+INFO: PERSISTENCE_CONFIG - tipo alterado para: JSON por: admin
+Jun 26, 2026 12:10:11 PM br.com.sistema.service.ReportService gerarRelatorioConfiguracaoPersistencia
+INFO: REPORT_GEN - configuração de persistência solicitada por: admin
+Jun 26, 2026 12:10:11 PM br.com.sistema.service.ReportService gerarRelatoriopesoAvaliacoes
+INFO: REPORT_GEN - pesos de avaliações solicitado por: admin [ADMIN]
+Jun 26, 2026 12:10:11 PM br.com.sistema.service.ReportService gerarRelatorioConfiguracaoPersistencia
+INFO: REPORT_GEN - configuração de persistência solicitada por: admin
+Jun 26, 2026 12:10:11 PM br.com.sistema.service.ReportService gerarRelatorioConfiguracaoPersistencia
+WARNING: AUTHZ_FAILURE - relatório de persistência negado para: prof
+Jun 26, 2026 12:10:11 PM br.com.sistema.service.ReportService gerarRelatorioResumoAvaliacoes
+INFO: REPORT_GEN - resumo de avaliações solicitado por: admin [ADMIN]
+Jun 26, 2026 12:10:11 PM br.com.sistema.service.ReportService gerarRelatorioResumoAvaliacoes
+INFO: REPORT_GEN - resumo de avaliações solicitado por: admin [ADMIN]
+Jun 26, 2026 12:10:11 PM br.com.sistema.service.TurmaService registrarTurma
+WARNING: AUTHZ_FAILURE - cadastro de turma negado para: null
+Jun 26, 2026 12:10:11 PM br.com.sistema.service.TurmaService registrarTurma
+WARNING: AUTHZ_FAILURE - cadastro de turma negado para: prof
+Jun 26, 2026 12:10:11 PM br.com.sistema.service.TurmaService registrarTurma
+INFO: CLASS_REGISTERED - código: CS101 por: admin
+Jun 26, 2026 12:19:37 PM br.com.sistema.logging.AcademicLoggerTest lambda$loggerAceitaMensagensInfoSemErro$0
+INFO: TEST - mensagem de teste
+Jun 26, 2026 12:19:48 PM br.com.sistema.security.AuthenticationService autenticar
+INFO: AUTH_SUCCESS - login: prof, papel: PROFESSOR
+Jun 26, 2026 12:19:48 PM br.com.sistema.security.AuthenticationService autenticar
+WARNING: AUTH_FAILURE - senha inválida para: admin
+Jun 26, 2026 12:19:48 PM br.com.sistema.security.AuthenticationService autenticar
+INFO: AUTH_SUCCESS - login: admin, papel: ADMIN
+Jun 26, 2026 12:19:48 PM br.com.sistema.security.AuthenticationService autenticar
+WARNING: AUTH_FAILURE - usuário não encontrado: naoexiste
+Jun 26, 2026 12:19:48 PM br.com.sistema.security.AuthenticationService verificarAdmin
+WARNING: AUTHZ_FAILURE - usuário prof tentou ação de ADMIN
+Jun 26, 2026 12:19:40 PM br.com.sistema.service.AvaliacaoService registrarAvaliacao
+INFO: ASSESSMENT_REGISTERED - turma: CS101, avaliação: Prova Final por: prof
+Jun 26, 2026 12:19:40 PM br.com.sistema.service.AvaliacaoService registrarAvaliacao
+WARNING: AUTHZ_FAILURE - registro de avaliação negado para: admin
+Jun 26, 2026 12:19:40 PM br.com.sistema.service.PersistenceService configurarPersistencia
+WARNING: AUTHZ_FAILURE - configurarPersistencia negado para: prof
+Jun 26, 2026 12:19:40 PM br.com.sistema.service.PersistenceService configurarPersistencia
+WARNING: AUTHZ_FAILURE - configurarPersistencia negado para: null
+Jun 26, 2026 12:19:40 PM br.com.sistema.service.PersistenceService configurarPersistencia
+INFO: PERSISTENCE_CONFIG - tipo alterado para: XML por: admin
+Jun 26, 2026 12:19:40 PM br.com.sistema.service.PersistenceService configurarPersistencia
+INFO: PERSISTENCE_CONFIG - tipo alterado para: JSON por: admin
+Jun 26, 2026 12:19:40 PM br.com.sistema.service.ReportService gerarRelatorioConfiguracaoPersistencia
+WARNING: AUTHZ_FAILURE - relatório de persistência negado para: prof
+Jun 26, 2026 12:19:40 PM br.com.sistema.service.ReportService gerarRelatoriopesoAvaliacoes
+INFO: REPORT_GEN - pesos de avaliações solicitado por: admin [ADMIN]
+Jun 26, 2026 12:19:40 PM br.com.sistema.service.ReportService gerarRelatorioResumoAvaliacoes
+INFO: REPORT_GEN - resumo de avaliações solicitado por: prof [PROFESSOR]
+Jun 26, 2026 12:19:40 PM br.com.sistema.service.ReportService gerarRelatoriopesoAvaliacoes
+INFO: REPORT_GEN - pesos de avaliações solicitado por: prof [PROFESSOR]
+Jun 26, 2026 12:19:40 PM br.com.sistema.service.ReportService gerarRelatoriopesoAvaliacoes
+INFO: REPORT_GEN - pesos de avaliações solicitado por: admin [ADMIN]
+Jun 26, 2026 12:19:40 PM br.com.sistema.service.PersistenceService configurarPersistencia
+INFO: PERSISTENCE_CONFIG - tipo alterado para: JSON por: admin
+Jun 26, 2026 12:19:40 PM br.com.sistema.service.ReportService gerarRelatorioConfiguracaoPersistencia
+INFO: REPORT_GEN - configuração de persistência solicitada por: admin
+Jun 26, 2026 12:19:40 PM br.com.sistema.service.ReportService gerarRelatoriopesoAvaliacoes
+INFO: REPORT_GEN - pesos de avaliações solicitado por: admin [ADMIN]
+Jun 26, 2026 12:19:40 PM br.com.sistema.service.ReportService gerarRelatorioConfiguracaoPersistencia
+INFO: REPORT_GEN - configuração de persistência solicitada por: admin
+Jun 26, 2026 12:19:40 PM br.com.sistema.service.ReportService gerarRelatorioConfiguracaoPersistencia
+WARNING: AUTHZ_FAILURE - relatório de persistência negado para: prof
+Jun 26, 2026 12:19:40 PM br.com.sistema.service.ReportService gerarRelatorioResumoAvaliacoes
+INFO: REPORT_GEN - resumo de avaliações solicitado por: admin [ADMIN]
+Jun 26, 2026 12:19:40 PM br.com.sistema.service.ReportService gerarRelatorioResumoAvaliacoes
+INFO: REPORT_GEN - resumo de avaliações solicitado por: admin [ADMIN]
+Jun 26, 2026 12:19:40 PM br.com.sistema.service.TurmaService registrarTurma
+WARNING: AUTHZ_FAILURE - cadastro de turma negado para: null
+Jun 26, 2026 12:19:40 PM br.com.sistema.service.TurmaService registrarTurma
+WARNING: AUTHZ_FAILURE - cadastro de turma negado para: prof
+Jun 26, 2026 12:19:40 PM br.com.sistema.service.TurmaService registrarTurma
+INFO: CLASS_REGISTERED - código: CS101 por: admin
+Jun 26, 2026 12:28:48 PM br.com.sistema.logging.AcademicLoggerTest lambda$loggerAceitaMensagensInfoSemErro$0
+INFO: TEST - mensagem de teste
+Jun 26, 2026 12:29:00 PM br.com.sistema.security.AuthenticationService autenticar
+INFO: AUTH_SUCCESS - login: prof, papel: PROFESSOR
+Jun 26, 2026 12:29:00 PM br.com.sistema.security.AuthenticationService autenticar
+WARNING: AUTH_FAILURE - senha inválida para: admin
+Jun 26, 2026 12:29:00 PM br.com.sistema.security.AuthenticationService autenticar
+INFO: AUTH_SUCCESS - login: admin, papel: ADMIN
+Jun 26, 2026 12:29:00 PM br.com.sistema.security.AuthenticationService autenticar
+WARNING: AUTH_FAILURE - usuário não encontrado: naoexiste
+Jun 26, 2026 12:29:00 PM br.com.sistema.security.AuthenticationService verificarAdmin
+WARNING: AUTHZ_FAILURE - usuário prof tentou ação de ADMIN
+Jun 26, 2026 12:29:00 PM br.com.sistema.service.AvaliacaoService registrarAvaliacao
+INFO: ASSESSMENT_REGISTERED - turma: CS101, avaliação: Prova Final por: prof
+Jun 26, 2026 12:29:00 PM br.com.sistema.service.AvaliacaoService registrarAvaliacao
+WARNING: AUTHZ_FAILURE - registro de avaliação negado para: admin
+Jun 26, 2026 12:29:00 PM br.com.sistema.service.PersistenceService configurarPersistencia
+WARNING: AUTHZ_FAILURE - configurarPersistencia negado para: prof
+Jun 26, 2026 12:29:00 PM br.com.sistema.service.PersistenceService configurarPersistencia
+WARNING: AUTHZ_FAILURE - configurarPersistencia negado para: null
+Jun 26, 2026 12:29:00 PM br.com.sistema.service.PersistenceService configurarPersistencia
+INFO: PERSISTENCE_CONFIG - tipo alterado para: XML por: admin
+Jun 26, 2026 12:29:00 PM br.com.sistema.service.PersistenceService configurarPersistencia
+INFO: PERSISTENCE_CONFIG - tipo alterado para: JSON por: admin
+Jun 26, 2026 12:29:00 PM br.com.sistema.service.ReportService gerarRelatorioConfiguracaoPersistencia
+WARNING: AUTHZ_FAILURE - relatório de persistência negado para: prof
+Jun 26, 2026 12:28:51 PM br.com.sistema.service.ReportService gerarRelatoriopesoAvaliacoes
+INFO: REPORT_GEN - pesos de avaliações solicitado por: admin [ADMIN]
+Jun 26, 2026 12:28:51 PM br.com.sistema.service.ReportService gerarRelatorioResumoAvaliacoes
+INFO: REPORT_GEN - resumo de avaliações solicitado por: prof [PROFESSOR]
+Jun 26, 2026 12:28:51 PM br.com.sistema.service.ReportService gerarRelatoriopesoAvaliacoes
+INFO: REPORT_GEN - pesos de avaliações solicitado por: prof [PROFESSOR]
+Jun 26, 2026 12:28:51 PM br.com.sistema.service.ReportService gerarRelatoriopesoAvaliacoes
+INFO: REPORT_GEN - pesos de avaliações solicitado por: admin [ADMIN]
+Jun 26, 2026 12:28:51 PM br.com.sistema.service.PersistenceService configurarPersistencia
+INFO: PERSISTENCE_CONFIG - tipo alterado para: JSON por: admin
+Jun 26, 2026 12:28:51 PM br.com.sistema.service.ReportService gerarRelatorioConfiguracaoPersistencia
+INFO: REPORT_GEN - configuração de persistência solicitada por: admin
+Jun 26, 2026 12:28:51 PM br.com.sistema.service.ReportService gerarRelatoriopesoAvaliacoes
+INFO: REPORT_GEN - pesos de avaliações solicitado por: admin [ADMIN]
+Jun 26, 2026 12:28:51 PM br.com.sistema.service.ReportService gerarRelatorioConfiguracaoPersistencia
+INFO: REPORT_GEN - configuração de persistência solicitada por: admin
+Jun 26, 2026 12:28:51 PM br.com.sistema.service.ReportService gerarRelatorioConfiguracaoPersistencia
+WARNING: AUTHZ_FAILURE - relatório de persistência negado para: prof
+Jun 26, 2026 12:28:51 PM br.com.sistema.service.ReportService gerarRelatorioResumoAvaliacoes
+INFO: REPORT_GEN - resumo de avaliações solicitado por: admin [ADMIN]
+Jun 26, 2026 12:28:51 PM br.com.sistema.service.ReportService gerarRelatorioResumoAvaliacoes
+INFO: REPORT_GEN - resumo de avaliações solicitado por: admin [ADMIN]
+Jun 26, 2026 12:28:51 PM br.com.sistema.service.TurmaService registrarTurma
+WARNING: AUTHZ_FAILURE - cadastro de turma negado para: null
+Jun 26, 2026 12:28:51 PM br.com.sistema.service.TurmaService registrarTurma
+WARNING: AUTHZ_FAILURE - cadastro de turma negado para: prof
+Jun 26, 2026 12:28:51 PM br.com.sistema.service.TurmaService registrarTurma
+INFO: CLASS_REGISTERED - código: CS101 por: admin

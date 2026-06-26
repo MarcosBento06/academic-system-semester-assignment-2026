@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="br.com.sistema.ui.controller.RelatoriosController"
+      spacing="16" VBox.vgrow="ALWAYS">
+
+    <Label styleClass="section-title" text="Relatórios"/>
+
+    <HBox spacing="10">
+        <Button styleClass="btn-primary" text="Resumo de Avaliações"
+                onAction="#handleResumo"/>
+        <Button styleClass="btn-primary" text="Peso das Avaliações"
+                onAction="#handlePeso"/>
+        <Button fx:id="btnPersistencia" styleClass="btn-primary"
+                text="Configuração de Persistência"
+                onAction="#handlePersistencia"
+                visible="false" managed="false"/>
+    </HBox>
+
+    <TextArea fx:id="txtRelatorio" styleClass="report-area"
+              editable="false" wrapText="true"
+              VBox.vgrow="ALWAYS"/>
+
+</VBox>

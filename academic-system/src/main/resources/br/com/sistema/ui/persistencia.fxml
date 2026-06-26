@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="br.com.sistema.ui.controller.PersistenciaController"
+      spacing="0">
+
+    <fx:define>
+        <ToggleGroup fx:id="grpTipo"/>
+    </fx:define>
+
+    <Label styleClass="section-title" text="Configurar Persistência"/>
+
+    <VBox styleClass="card" maxWidth="420" spacing="20">
+
+        <Label text="Selecione o formato de persistência dos dados:"
+               styleClass="form-label" wrapText="true"/>
+
+        <VBox spacing="12">
+            <RadioButton fx:id="rbTxt" text="TXT: arquivo de texto simples"
+                         styleClass="radio-button" toggleGroup="$grpTipo" userData="TXT"/>
+            <RadioButton fx:id="rbXml" text="XML: formato estruturado e interoperável"
+                         styleClass="radio-button" toggleGroup="$grpTipo" userData="XML"/>
+            <RadioButton fx:id="rbJson" text="JSON: formato leve para troca de dados"
+                         styleClass="radio-button" toggleGroup="$grpTipo" userData="JSON"/>
+        </VBox>
+
+        <Separator/>
+
+        <Label fx:id="lblMensagem" styleClass="msg-success" text="" wrapText="true"/>
+
+        <HBox spacing="12">
+            <Button styleClass="btn-primary" text="Aplicar"
+                    onAction="#handleAplicar" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+            <Button styleClass="btn-primary" text="Salvar Agora"
+                    onAction="#handleSalvar"/>
+        </HBox>
+
+        <Label fx:id="lblAtual" styleClass="form-label-muted" text=""/>
+
+    </VBox>
+</VBox>

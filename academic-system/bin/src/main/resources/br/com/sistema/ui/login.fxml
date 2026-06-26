@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/21"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="br.com.sistema.ui.controller.LoginController"
+           stylesheets="@login.css"
+           prefWidth="420" prefHeight="480">
+
+    <VBox styleClass="root-pane" alignment="CENTER">
+        <VBox styleClass="login-card" alignment="CENTER" spacing="0">
+
+            <Label styleClass="title-label" text="Academic System"/>
+            <Label styleClass="subtitle-label" text="Faça login para continuar"/>
+
+            <VBox spacing="12" style="-fx-padding: 24 0 8 0;">
+
+                <VBox spacing="4">
+                    <Label styleClass="login-field-label" text="Usuário"/>
+                    <TextField fx:id="txtUsuario" styleClass="login-field"
+                               promptText="Digite seu usuário"/>
+                </VBox>
+
+                <VBox spacing="4">
+                    <Label styleClass="login-field-label" text="Senha"/>
+                    <PasswordField fx:id="txtSenha" styleClass="login-field"
+                                  promptText="Digite sua senha"/>
+                </VBox>
+
+            </VBox>
+
+            <Label fx:id="lblErro" styleClass="error-label" text="" wrapText="true"/>
+
+            <Button fx:id="btnLogin" styleClass="login-button"
+                    text="Entrar" onAction="#handleLogin"
+                    maxWidth="Infinity"/>
+
+        </VBox>
+    </VBox>
+</StackPane>

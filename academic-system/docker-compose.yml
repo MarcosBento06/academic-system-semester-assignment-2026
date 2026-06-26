@@ -1,0 +1,9 @@
+services:
+  academic-system:
+    build: .
+    image: academic-system:1.0
+    container_name: academic-system
+    stdin_open: true   # equivale a -i
+    tty: true          # equivale a -t
+    volumes:
+      - ./data:/app/data   # persiste avaliacoes.txt / usuarios.txt fora do container

@@ -1,18 +1,21 @@
 package br.com.sistema.model;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import jakarta.validation.constraints.NotBlank;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
-@Data
+@Getter
+@Setter
 public class Turma {
-	@NotBlank(message = "Código da turma não pode ser vazio.")
+    @NotBlank(message = "Código da turma não pode ser vazio.")
     private String codigo;
-	
-	@NotBlank(message = "Disciplina não pode ser vazia.")
+
+    @NotBlank(message = "Disciplina não pode ser vazia.")
     private String disciplina;
-	
+
     private List<Avaliacao> avaliacoes;
 
     public Turma(String codigo, String disciplina) {
@@ -25,15 +28,21 @@ public class Turma {
         this.avaliacoes.add(avaliacao);
     }
 
-    public void exibirInformacoes() {
-        System.out.println("Turma: " + codigo + " - " + disciplina);
-        System.out.println("Avaliações Cadastradas:");
-        if (avaliacoes.isEmpty()) {
-            System.out.println("  Nenhuma avaliação cadastrada.");
-        } else {
-            for (Avaliacao a : avaliacoes) {
-                System.out.println("  - " + a.toString());
-            }
-        }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Turma)) return false;
+        Turma other = (Turma) o;
+        return Objects.equals(codigo, other.codigo);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(codigo);
+    }
+
+    @Override
+    public String toString() {
+        return codigo + " - " + disciplina;
     }
 }
